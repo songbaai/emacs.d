@@ -9,10 +9,10 @@
 ;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
 ;;(setq debug-on-error t)
 
-(let ((minver "25.1"))
+(let ((minver "24.5"))
   (when (version< emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-(when (version< emacs-version "26.1")
+(when (version< emacs-version "25.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -40,6 +40,10 @@
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
 ;;----------------------------------------------------------------------------
@@ -66,7 +70,8 @@
 (require 'init-flycheck)
 
 (require 'init-recentf)
-(require 'init-selectrum)
+(require 'init-smex)
+(require 'init-ivy)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
@@ -105,7 +110,6 @@
 (require 'init-rails)
 (require 'init-sql)
 (require 'init-ocaml)
-(require 'init-j)
 (require 'init-nim)
 (require 'init-rust)
 (require 'init-toml)
@@ -182,7 +186,18 @@
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
 
+(cond
+ ((>= 24 emacs-major-version)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa"
+                                   . "https://melpa.org/packages/") t)
+  ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+  ;; and `package-pinned-packages`. Most users will not need or want to do this.
+  ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+  (package-refresh-contents)))
 
+(setq-default tab-width 4)
 
 (provide 'init)
 
