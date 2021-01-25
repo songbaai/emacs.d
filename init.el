@@ -186,6 +186,8 @@
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
 
+(load "~/.emacs.d/physbam.el")
+
 (cond
  ((>= 24 emacs-major-version)
   (require 'package)
