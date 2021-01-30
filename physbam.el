@@ -68,8 +68,8 @@
 (set-face-underline-p 'nick-url-face t)
 (scroll-bar-mode -1)
 (tool-bar-mode)
-(global-set-key [mouse-4] 'scroll-down)
-(global-set-key [mouse-5] 'scroll-up)
+;;(global-set-key [mouse-4] 'scroll-down)
+;;(global-set-key [mouse-5] 'scroll-up)
 
 ;------------------------------------------------------------------------------
 ;

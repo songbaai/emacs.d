@@ -186,18 +186,20 @@
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
 
+(setq neo-autorefresh nil)
+(require 'web-mode)
+;; (setq sgml-quick-keys 'close)
+
+
+;; (eval-after-load "web-mode"   '(setq web-mode-tag-auto-close-style 1))
+
+
 (load "~/.emacs.d/physbam.el")
 
-(cond
- ((>= 24 emacs-major-version)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa"
-                                   . "https://melpa.org/packages/") t)
-  ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-  ;; and `package-pinned-packages`. Most users will not need or want to do this.
-  ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-  (package-refresh-contents)))
+
+
+
+
 
 (setq-default tab-width 4)
 
