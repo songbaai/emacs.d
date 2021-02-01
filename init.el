@@ -187,7 +187,10 @@
 (require 'init-local nil t)
 
 (setq neo-autorefresh nil)
-(require 'web-mode)
+(require-package 'web-mode)
+(require-package 'treemacs)
+(require-package 'neotree)
+(require-package 'tabbar)
 ;; (setq sgml-quick-keys 'close)
 
 
