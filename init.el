@@ -197,7 +197,7 @@
 ;; (eval-after-load "web-mode"   '(setq web-mode-tag-auto-close-style 1))
 
 
-(load "~/.emacs.d/physbam.el")
+(load "~/.emacs.d/physbamemacs.el")
 
 
 
