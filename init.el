@@ -190,7 +190,8 @@
 (require-package 'web-mode)
 (require-package 'treemacs)
 (require-package 'neotree)
-(require-package 'tabbar)
+(require-package 'vim-mode)
+;;(require-package 'tabbar)
 ;; (setq sgml-quick-keys 'close)
 
 
@@ -200,11 +201,13 @@
 (load "~/.emacs.d/physbamemacs.el")
 
 
+;;(setq-default tab-width 4)
+(defun my-insert-tab-char ()
+  "Insert a tab char. (ASCII 9, \t)"
+  (interactive)
+  (insert "\t"))
 
-
-
-
-(setq-default tab-width 4)
+(global-set-key (kbd "TAB") 'my-insert-tab-char)
 
 (provide 'init)
 

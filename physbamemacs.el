@@ -32,16 +32,16 @@
         (foreground-color . "White")
         (background-color . "Black")))
 
-; Make the modeline a little more inconspicuous...
-; (set-face-background 'modeline "#202020")
-; (set-face-foreground 'modeline "#C0C0C0")
+;; Make the modeline a little more inconspicuous...
+;; (set-face-background 'modeline "#202020")
+;; (set-face-foreground 'modeline "#C0C0C0")
 
 
-; Make all tabs spaces by default
-(setq-default indent-tabs-mode nil)
+;; Make all tabs spaces by default
+;;(setq-default indent-tabs-mode nil)
 
-; Set up the mode-specific font locking
-;(global-font-lock-mode t nil)
+;; Set up the mode-specific font locking
+;;(global-font-lock-mode t nil)
 (setq font-lock-maximum-decoration t)
 
 ; Set the modes for various types of files
