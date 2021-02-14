@@ -190,7 +190,14 @@
 (require-package 'web-mode)
 (require-package 'treemacs)
 (require-package 'neotree)
-(require-package 'vim-mode)
+
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
 ;;(require-package 'tabbar)
 ;; (setq sgml-quick-keys 'close)
 
