@@ -198,6 +198,7 @@
 (require 'evil)
 (evil-mode 1)
 
+(require-package 'vue-mode)
 ;;(require-package 'tabbar)
 ;; (setq sgml-quick-keys 'close)
 

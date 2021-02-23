@@ -124,7 +124,7 @@
 ; PhysBAM stuff
 ;####################################################################
 (setq physbam-use-scons t)
-(load-file (format "./physbam.el" (getenv "PHYSBAM"))) 
+(load-file (format "~/.emacs.d/physbam.el" (getenv "PHYSBAM"))) 
 
 ; (setq font-lock-support-mode 'lazy-lock-mode)
 (set-face-foreground  'font-lock-string-face "SteelBlue")
