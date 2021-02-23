@@ -209,7 +209,8 @@
 (load "~/.emacs.d/physbamemacs.el")
 
 
-;;(setq-default tab-width 4)
+(setq-default tab-width 4)
+
 (defun my-insert-tab-char ()
   "Insert a tab char. (ASCII 9, \t)"
   (interactive)
