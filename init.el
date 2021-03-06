@@ -186,6 +186,7 @@
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
 
+;;Song's personal setting
 (setq neo-autorefresh nil)
 (require-package 'web-mode)
 (require-package 'treemacs)
@@ -197,27 +198,22 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+;; disable visual block
+;;(bind-key "c-v" (scroll-up-command))
 
 (require-package 'vue-mode)
-(vue-mode 1)
-;;(require-package 'tabbar)
-;; (setq sgml-quick-keys 'close)
-
-
-;; (eval-after-load "web-mode"   '(setq web-mode-tag-auto-close-style 1))
 
 
 (load "~/.emacs.d/physbamemacs.el")
 
 
-(setq-default tab-width 4)
+;;(setq-default tab-width 4)
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :config
+  (load-theme 'sanityinc-tomorrow-blue t))
 
-(defun my-insert-tab-char ()
-  "Insert a tab char. (ASCII 9, \t)"
-  (interactive)
-  (insert "\t"))
-
-(global-set-key (kbd "TAB") 'my-insert-tab-char)
+;;(global-set-key (kbd "TAB") 'my-insert-tab-char)
 
 (provide 'init)
 
