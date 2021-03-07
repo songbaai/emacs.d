@@ -9,7 +9,7 @@
 ;#####################################################################
 
 (defconst physbam-c-style
-  '((c-basic-offset . 4)
+  '((c-basic-offset . 2)
         (c-offsets-alist . ((string . -1000)
                         (c . c-lineup-C-comments)
                         (defun-open . 0)

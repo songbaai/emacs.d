@@ -206,12 +206,10 @@
 
 (load "~/.emacs.d/physbamemacs.el")
 
+(setq-default c-default-style "linux"
+              c-basic-offset 2)
 
 ;;(setq-default tab-width 4)
-(use-package color-theme-sanityinc-tomorrow
-  :ensure t
-  :config
-  (load-theme 'sanityinc-tomorrow-blue t))
 
 ;;(global-set-key (kbd "TAB") 'my-insert-tab-char)
 
